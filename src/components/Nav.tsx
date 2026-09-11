@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <div className="px-4">
       
-      <nav className="relative flex items-center justify-between max-w-7xl mx-auto my-6">
+      <nav className="relative flex items-center justify-between max-w-7xl mx-auto my-4">
         
         {/* Hamburger - Mobile */}
         <button
