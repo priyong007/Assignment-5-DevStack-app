@@ -1,7 +1,7 @@
 
 [
   {
-    "id": "react",
+    "id": "React",
     "name": "React",
     "category": "Frontend",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
@@ -11,7 +11,7 @@
     "badge": "Popular"
   },
   {
-    "id": "vue",
+    "id": "Vue",
     "name": "Vue.js",
     "category": "Frontend",
     "description": "A progressive JavaScript framework for building user interfaces and single-page applications.",
@@ -21,7 +21,7 @@
     "badge": "Popular"
   },
   {
-    "id": "svelte",
+    "id": "Svelte",
     "name": "Svelte",
     "category": "Frontend",
     "description": "A modern frontend framework that compiles components into efficient JavaScript at build time.",
@@ -31,7 +31,7 @@
     "badge": "Lightweight"
   },
   {
-    "id": "nextjs",
+    "id": "Nextjs",
     "name": "Next.js",
     "category": "Frontend",
     "description": "A React framework for building fast, full-stack web applications with server-side rendering and static generation.",
@@ -41,7 +41,7 @@
     "badge": "React Framework"
   },
   {
-    "id": "nodejs",
+    "id": "Nodejs",
     "name": "Node.js",
     "category": "Backend",
     "description": "A JavaScript runtime built on Chrome's V8 engine for developing scalable server-side applications.",
@@ -50,8 +50,18 @@
     "difficulty": "Intermediate",
     "badge": "Popular"
   },
+   {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Database",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Top SQL"
+  },
   {
-    "id": "redis",
+    "id": "Redis",
     "name": "Redis",
     "category": "Database",
     "description": "An in-memory data store used for caching, real-time applications, queues, and high-performance data access.",
@@ -61,7 +71,7 @@
     "badge": "Fast Storage"
   },
   {
-    "id": "javascript",
+    "id": "Javascript",
     "name": "JavaScript",
     "category": "Language",
     "description": "A versatile programming language used to create interactive web experiences and full-stack applications.",
@@ -71,7 +81,7 @@
     "badge": "Essential"
   },
   {
-    "id": "typescript",
+    "id": "Typescript",
     "name": "TypeScript",
     "category": "Language",
     "description": "A strongly typed programming language that builds on JavaScript to improve code quality and maintainability.",
@@ -81,7 +91,7 @@
     "badge": "Type-Safe"
   },
   {
-    "id": "java",
+    "id": "Java",
     "name": "Java",
     "category": "Language",
     "description": "A class-based, object-oriented programming language widely used for enterprise, backend, and Android development.",
@@ -91,7 +101,7 @@
     "badge": "Enterprise"
   },
   {
-    "id": "tailwindcss",
+    "id": "Tailwindcss",
     "name": "Tailwind CSS",
     "category": "Frontend",
     "description": "A utility-first CSS framework for rapidly building modern, responsive, and customizable user interfaces.",
@@ -101,7 +111,7 @@
     "badge": "Popular"
   },
   {
-    "id": "docker",
+    "id": "Docker",
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform for packaging applications and their dependencies into portable containers for consistent deployment.",
