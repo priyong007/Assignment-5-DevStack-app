@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import logo from '../assets/logo-text.png';
 import { FiMenu } from 'react-icons/fi';
 
@@ -6,9 +6,9 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="px-4">
+    <div className="px-4 sticky top-0 ">
       
-      <nav className="relative flex items-center justify-between max-w-7xl mx-auto my-4">
+      <nav className="  relative flex items-center justify-between max-w-7xl mx-auto my-4">
         
         {/* Hamburger - Mobile */}
         <button

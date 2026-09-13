@@ -6,6 +6,7 @@ import Banner from './components/Banner'
 import Nav from './components/Nav'
 import Technologies from './components/technologies/Technologies';
 import type { ITechType } from './type/TechnologyType';
+import Footer from './components/Footer';
 
 
 
@@ -30,6 +31,8 @@ function App() {
     <Technologies technologiesPromise={technologiesPromise ()} />
 
     </Suspense>
+
+    <Footer/>
 
 
     
