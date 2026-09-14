@@ -1,6 +1,8 @@
 import { use, useState } from 'react';
 import type { ITechType } from '../../type/TechnologyType';
 import Technology from './Technology';
+import { toast } from 'react-toastify';
+import { RxCross1 } from 'react-icons/rx';
 
 export interface TechnologiesProps {
   technologiesPromise: Promise<ITechType[]>;
@@ -14,24 +16,28 @@ export default function Technologies({
   const [cartTechnology, setCartTechnology] = useState<ITechType[]>([]);
 
   const handleCartUpdate = (technology: ITechType): void => {
-    const isAlreadyAdded = cartTechnology.some(
-      (item) => item.id === technology.id
-    );
+    const isAlreadyAdded =
+  cartTechnology.filter(
+    (item) => item.id === technology.id
+  ).length > 0;
 
     if (isAlreadyAdded) {
 
       setCartTechnology((prev) =>
         prev.filter((item) => item.id !== technology.id)
       );
+      toast.info(`${technology.name} removed from your stack`);
     } else {
 
       setCartTechnology((prev) => [...prev, technology]);
+      toast.success(`${technology.name} added to your stack`);
     }
   };
 
 
   const handleDeleteAll = (): void => {
     setCartTechnology([]);
+    toast.info('All technologies removed from your stack');
   };
 
   return (
@@ -59,7 +65,7 @@ export default function Technologies({
         </div>
 
         {/* Right side: Your Stack */}
-        <div className="lg:col-span-3 h-fit border border-gray-300 rounded-xl p-4">
+        <div className="lg:col-span-3 h-fit border border-gray-300 rounded-xl p-4 sticky top-20">
           <h2 className="text-2xl font-bold mb-2">
             Your Stack
           </h2>
@@ -84,9 +90,12 @@ export default function Technologies({
                     />
                   </svg>
 
-                  <span className="font-medium">
+                  <div>
+                    <span className="font-medium text-2xl">
                     {technology.name}
                   </span>
+                  <p className=''>{technology.category}</p>
+                  </div>
                 </div>
 
                 {/* Single delete button */}
@@ -95,7 +104,7 @@ export default function Technologies({
                   className="text-xl text-gray-400 hover:text-red-500"
                   title="Remove technology"
                 >
-                  ×
+                 <RxCross1 />
                 </button>
               </div>
             ))}
@@ -105,7 +114,7 @@ export default function Technologies({
           {cartTechnology.length > 0 && (
             <button
               onClick={handleDeleteAll}
-              className="mt-5 w-full rounded-lg bg-white-500 py-2 font-bold text-red-600 border border-red-400 "
+              className="mt-12 w-full rounded-lg bg-white-500 py-2 font-bold text-red-600 border border-red-400 "
             >
               Delete All
             </button>

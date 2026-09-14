@@ -7,6 +7,7 @@ import Nav from './components/Nav'
 import Technologies from './components/technologies/Technologies';
 import type { ITechType } from './type/TechnologyType';
 import Footer from './components/Footer';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -25,6 +26,7 @@ function App() {
     <>
     <Nav/>
     <Banner/>
+    <ToastContainer/>
 
     <Suspense fallback={<h2> loding...</h2>}>
 
